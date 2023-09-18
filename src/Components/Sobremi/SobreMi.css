@@ -1,0 +1,158 @@
+.container-principal_sobre-mi{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.sobre-mi{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 900px;
+}
+
+.container-sobre-mi{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3vh;
+}
+
+.sobre-mi_informacion{
+    display: flex;
+    align-items: center;
+    gap: 3vw;
+}
+
+.foto{
+    width: 200px;
+    border-radius: 50%;
+}
+.sobre-mi_informacion--biografia{
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+}
+.sobre-mi_informacion--biografia p{
+    font-family: 'Graphik-normal';
+    font-size: 18px;
+    line-height: 1.5;
+}
+.biografia-secundaria p{
+    opacity: .8;
+}
+
+
+
+.subtitle{
+    font-family: 'Graphik-semibold';
+    font-size: 35px;
+    margin-bottom: 2vh;
+}
+
+
+
+
+.sobre-mi_educacion-tecnologias{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.educacion{
+    display: flex;
+    flex-direction: column;
+}
+.educacion-items{
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+}
+.educacion-item{
+    display: flex;
+    flex-direction: column;
+}
+.educacion-item span{
+    font-family: 'Graphik-normal';
+    font-size: 18px;
+}
+.text-opacity{
+    opacity: .8;
+}
+
+
+
+
+
+
+
+
+
+
+
+.icons-tecnologias{
+    display: grid;
+    grid-template-columns: repeat(3, 80px);
+    grid-template-rows: repeat(3, 80px);
+}
+.icon-tecnologia{
+    width: 50px;
+}
+
+
+@media only screen and (max-width: 1050px){
+    .container-principal_sobre-mi{
+        padding: 0 ;
+    }
+}
+
+@media only screen and (max-width: 800px){
+    .container-sobre-mi{
+        padding: 50px;
+    }
+    .foto{
+        width: 150px;
+    }
+    .sobre-mi_educacion-tecnologias{
+        flex-direction: column;
+        align-items: center;
+        gap: 5vh;
+        padding: 50px;
+    }
+
+    
+    .tecnologias{
+        width: 100%;
+    }
+    .educacion{
+        width: 100%;
+    }
+
+    .icons-tecnologias{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    .icon-tecnologia{
+        width: 40px;
+    }
+
+}
+
+@media only screen and (max-width: 500px){
+    .container-sobre-mi{
+        padding: 20px;
+    }
+    .biografia-principal{
+        font-size: 15px !important;
+    }
+    .biografia-secundaria p{
+        font-size: 15px;
+    }
+    span{
+        font-size: 15px !important;
+    }
+
+    .sobre-mi_educacion-tecnologias{
+        padding: 20px;
+    }
+}

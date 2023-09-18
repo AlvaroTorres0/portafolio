@@ -1,0 +1,50 @@
+body,html,* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #fff;
+}
+html{
+  scroll-behavior: smooth;
+}
+.title{
+  font-family: 'Graphik-semibold';
+  font-size: 55px;
+  margin-bottom: 3vh;
+}
+@font-face {
+  font-family: 'Graphik';
+  src: url('./assets//Fonts/GraphikBold.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Graphik-sub';
+  src: url('./assets/Fonts/GraphikMedium.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Graphik-light';
+  src: url('./assets/Fonts/GraphikLight.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Graphik-normal';
+  src: url('./assets/Fonts/GraphikRegular.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Graphik-bold';
+  src: url('./assets/Fonts/GraphikBlack.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Graphik-semibold';
+  src: url('./assets/Fonts/GraphikSemibold.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
