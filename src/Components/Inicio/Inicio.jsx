@@ -6,7 +6,35 @@ import gitlab from "../../assets/icons/gitlab.png";
 import linkedin from "../../assets/icons/linkedin.png";
 import principal from "../../assets/principal.png";
 
+
 function Inicio() {
+
+  function descargarArchivo(){ 
+    const url = 'https://ktwuchnbbobnekfrdeai.supabase.co/storage/v1/object/public/cv-alvaro/CV.pdf?t=2023-09-22T03%3A24%3A46.500Z';
+    const nombreArchivo = "CV-Alvaro-Torres.pdf";
+    fetch(url)
+        .then(response => response.blob())
+        .then(blob => {
+            //! Crear un enlace para descargar el archivo
+            const enlaceDescarga = document.createElement('a');
+            enlaceDescarga.href = URL.createObjectURL(blob);
+            enlaceDescarga.download = nombreArchivo;
+            enlaceDescarga.style.display = 'none';
+  
+            //! Agregar el enlace al documento y hacer clic en él
+            document.body.appendChild(enlaceDescarga);
+            enlaceDescarga.click();
+  
+            //! Limpiar el objeto URL y eliminar el enlace
+            URL.revokeObjectURL(enlaceDescarga.href);
+            document.body.removeChild(enlaceDescarga);
+                    
+          })
+          .catch(error => {
+            console.error('Error al descargar el archivo:', error);
+          });
+    }
+
   return (
     <section className='container-principal_inicio' id="principal">
       <div className="section-inicio">
@@ -27,7 +55,7 @@ function Inicio() {
             </div>  
 
             <div className="section-data_button">
-              <button className='descargarCV'>Descargar CV</button>
+              <button onClick={descargarArchivo} className='descargarCV'>Descargar CV</button>
             </div>    
           </div>
         </section>
