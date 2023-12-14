@@ -6,7 +6,6 @@ import gitlab from "../../assets/icons/gitlab.png";
 import linkedin from "../../assets/icons/linkedin.png";
 import principal from "../../assets/principal.png";
 
-
 function Inicio() {
 
   function descargarArchivo(){ 
@@ -36,9 +35,9 @@ function Inicio() {
     }
 
   return (
-    <section className='container-principal_inicio' id="principal">
-      <div className="section-inicio">
-        <section className='section-data'>
+      <section className='container-principal_inicio section' id="principal">
+
+        <article className='section-data'>
           <h1 className='section-data_title'>Álvaro Torres</h1>
           
           <div className="section-data_info">
@@ -58,17 +57,18 @@ function Inicio() {
               <button onClick={descargarArchivo} className='descargarCV'>Descargar CV</button>
             </div>    
           </div>
-        </section>
+        </article>
 
 
-        <section className='section-img'>
+        <article className='section-img'>
           <img src={principal} alt="" />
-        </section>
-
-      </div>
+        </article>
 
 
-    </section>
+      </section>
+
+
+    
   )
 }
 

@@ -68,9 +68,6 @@
 }
 
 @media only screen and (max-width: 1050px){
-    .container-principal_proyectos{
-        padding: 50px;
-    }
     .container-proyectos{
         display: flex;
         flex-direction: column;

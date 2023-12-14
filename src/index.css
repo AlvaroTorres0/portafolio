@@ -7,6 +7,9 @@ body,html,* {
 html{
   scroll-behavior: smooth;
 }
+*::selection{
+  background: #f00;
+}
 .title{
   font-family: 'Graphik-semibold';
   font-size: 55px;

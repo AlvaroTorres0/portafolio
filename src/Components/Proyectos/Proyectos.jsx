@@ -21,41 +21,41 @@ function Proyectos() {
     {nombre:"Búsqueda de tablas y campos", descripcion:"Aplicación web para el SAT, hecha con Angular y PostgreSQL", icons:[angular,postgres,typescript], imagen: bdsat}
   ]
   return (
-    <section className='container-principal_proyectos' id="projects">
-      <div className='proyectos'>
-        <h3 className='title'>Proyectos</h3>
+    <section className='container-principal_proyectos section' id="projects">
+        <div className='proyectos'>
+          <h3 className='title'>Proyectos</h3>
 
-        <section className="container-proyectos">
-          {
-            infoProyectos.map(proyecto => {
-              const {nombre,descripcion,icons,imagen} = proyecto;
-              return(
-                <article className='proyecto'>
-                  <img src={imagen} alt="" />
+          <article className="container-proyectos">
+            {
+              infoProyectos.map((proyecto,index) => {
+                const {nombre,descripcion,icons,imagen} = proyecto;
+                return(
+                  <article key={index} className='proyecto'>
+                    <img src={imagen} alt="" />
 
-                  <div className="container-sombra">
-                    <div className="container-info-proyecto">
-                      <span className='nombre-proyecto'>{nombre}</span>
-                      <p className='desc-proyecto'>{descripcion}</p>
+                    <div className="container-sombra">
+                      <div className="container-info-proyecto">
+                        <span className='nombre-proyecto'>{nombre}</span>
+                        <p className='desc-proyecto'>{descripcion}</p>
 
-                      <div className="proyecto-tecnologias">
-                        {
-                          icons.map(icon=>{
-                            return(
-                              <img src={icon} alt="" />
-                            )
-                          })
-                        }                        
+                        <div className="proyecto-tecnologias">
+                          {
+                            icons.map((icon,index)=>{
+                              return(
+                                <img key={index} src={icon} alt="" />
+                              )
+                            })
+                          }                        
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </article>
-              )
-            })
-          }
-        </section>
-      </div>
-    </section>
+                  </article>
+                )
+              })
+            }
+          </article>
+        </div>
+      </section>
   )
 }
 

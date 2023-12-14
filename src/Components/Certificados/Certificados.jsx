@@ -13,7 +13,7 @@ function Certificados() {
         {nombre:"JavaScript y el DOM", descripcion:"Variable, tipos de datos, ciclos y condicionales, arrays, POO, métodos de cadena, métodos de arrays, manejo de consola y el DOM", imagen: dom}
       ]
       return (
-        <section className='container-principal_certificaciones' id="certifications">
+        <section className='container-principal_certificaciones section' id="certifications">
           <div className='certificados'>
             <h3 className='title'>Certificaciones</h3>
     
@@ -22,7 +22,7 @@ function Certificados() {
                 infoCertificados.map(certificado => {
                   const {nombre,descripcion,imagen} = certificado;
                   return(
-                    <article className='certificado'>
+                    <article key={nombre} className='certificado'>
                       <img src={imagen} alt="" />
     
                       <div className="container-sombra">

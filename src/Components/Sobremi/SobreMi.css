@@ -1,7 +1,7 @@
 .container-principal_sobre-mi{
+    width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
 }
 .sobre-mi{
@@ -9,7 +9,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    max-width: 900px;
 }
 
 .container-sobre-mi{
@@ -58,7 +57,7 @@
     justify-content: space-between;
     width: 100%;
 }
-.educacion{
+.educacion .tecnologias{
     display: flex;
     flex-direction: column;
 }
@@ -81,17 +80,9 @@
 
 
 
-
-
-
-
-
-
-
-
 .icons-tecnologias{
     display: grid;
-    grid-template-columns: repeat(3, 80px);
+    grid-template-columns: repeat(4, 80px);
     grid-template-rows: repeat(3, 80px);
 }
 .icon-tecnologia{
@@ -105,20 +96,16 @@
     }
 }
 
-@media only screen and (max-width: 800px){
-    .container-sobre-mi{
-        padding: 50px;
+@media only screen and (max-width: 500px){
+    .foto{
+        width: 10px;
     }
+}
+
+@media only screen and (max-width: 800px){
     .foto{
         width: 150px;
     }
-    .sobre-mi_educacion-tecnologias{
-        flex-direction: column;
-        align-items: center;
-        gap: 5vh;
-        padding: 50px;
-    }
-
     
     .tecnologias{
         width: 100%;
@@ -127,11 +114,6 @@
         width: 100%;
     }
 
-    .icons-tecnologias{
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px;
-    }
     .icon-tecnologia{
         width: 40px;
     }
@@ -154,5 +136,17 @@
 
     .sobre-mi_educacion-tecnologias{
         padding: 20px;
+    }
+}
+
+@media only screen and (max-width: 1180px){
+    .sobre-mi_educacion-tecnologias{
+        flex-direction: column;
+        gap: 5vh;
+    }
+    .icons-tecnologias{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
     }
 }
